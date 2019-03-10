@@ -1,0 +1,4 @@
+.DS_Store
+/api/config/database.php
+/deploy.sh
+.idea
