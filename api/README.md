@@ -8,11 +8,9 @@ This documentation covers the public API.
 
 ### Getting a list of competitions:
 
-**URL:** `{base_url}/api/competition/read.php`
-
-**Requires authentication:** NO
-
-**Request type:**: GET
+* **URL:** `{base_url}/api/competition/read.php`
+* **Requires authentication:** NO
+* **Request type:**: GET
 
 **Request example:**   
 
@@ -36,11 +34,9 @@ n/a
 
 ### Registration
 
-**URL:** `{base_url}/api/users/create.php`
-
-**Requires authentication:** N/A
-
-**Request type:**: POST
+* **URL:** `{base_url}/api/users/create.php`
+* **Requires authentication:** N/A
+* **Request type:** POST
 
 **Request example:**
 
@@ -63,13 +59,9 @@ n/a
 
 ### Login
 
-**URL:** `{base_url}/api/users/login.php`
-
-**Requires authentication:** N/A
-
-**Request type:**: POST
-
-**Request example:**
+* **URL:** `{base_url}/api/users/login.php`
+* **Requires authentication:** N/A
+* **Request type:**: POST
 
 **Request example:**   
 
