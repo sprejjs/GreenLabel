@@ -24,7 +24,8 @@ class Competition {
 
     function read() {
         // select all query
-        $query = "SELECT name, description FROM {$this->table_name}";
+        $query = "SELECT id, name, description, class1, class2, class3, class4, class5, class6, class7, class8, class9, class10
+                  FROM {$this->table_name}";
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);

@@ -1,0 +1,11 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #B5DDA4;
+    width: 100%;
+    padding: 16px;
+}
+
+#competitions-table-wrapper {
+    padding: 16px;
+}
