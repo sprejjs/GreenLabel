@@ -20,11 +20,11 @@
 <nav class="navbar navbar-light" style="background-color: #B5DDA4;">
     <h2>Green Label</h2>
 
-    <button type="button" class="btn btn-light">Login</button>
+    <a href="login.html" class="btn btn-light">Login</a>
 </nav>
 
 <div class="jumbotron">
-    <h1 class="display-4">About the project</h1>
+    <h2>About the project</h2>
     <p class="lead">Green Label is a responsive web application that enables businesses to run image labeling
         competitions to solve machine learning classification problems.</p>
     <hr class="my-4">
@@ -60,7 +60,7 @@
                     "<tr>" +
                         "<td>" + data.name + "</td>" +
                         "<td>" + data.description + "</td>" +
-                        "<td><button type='button' class='btn btn-secondary btn-block'>Join</button></td>" +
+                        "<td><a href='/competition.html?id=" + data.id + "' class='btn btn-secondary btn-block'>Join</a></td>" +
                     "</tr>"
                 );
         });

@@ -6,6 +6,21 @@
     padding: 16px;
 }
 
+.login-form-wrapper {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+}
+
+.logo {
+    color: black;
+}
+
 #competitions-table-wrapper {
     padding: 16px;
+}
+
+#login-form-loader {
+    padding-top: 32px;
 }

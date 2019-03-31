@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Green Label</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<nav class="navbar navbar-light" style="background-color: #B5DDA4;">
+    <h2><a href="/" class="logo">Green Label</a></h2>
+</nav>
+
+<div id="member-details" class="jumbotron" style="display: none;">
+    <h2>You are logged in</h2>
+</div>
+
+<div class="text-center" id="login-form-loader">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<div class="card login-form-wrapper" id="login-form" style="display: none;">
+    <div class="card-body">
+        <div class="alert alert-danger" role="alert" id="login-form-error" style="display: none;">
+            Log in error
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+        <button class="btn btn-primary" onclick="initiateLogin()">Log In</button>
+    </div>
+</div>
+
+<div class="footer">
+    An open source project by <a href="http://www.spreys.com">Vlad Spreys</a>
+</div>
+</body>
+<script>
+    if(isTokenPresent()) {
+        $("#member-details").show();
+        $("#login-form-loader").hide();
+    } else {
+        $("#login-form").show();
+        $("#login-form-loader").hide();
+    }
+
+    function initiateLogin() {
+        const username = $("#inputEmail").first().val();
+        const password = $("#inputPassword").first().val();
+        login(username, password, function (success) {
+            if(success) {
+                $("#member-details").show();
+                $("#login-form").hide();
+            } else {
+                $("#login-form-error").show();
+            }
+        })
+    }
+</script>
+</html>
